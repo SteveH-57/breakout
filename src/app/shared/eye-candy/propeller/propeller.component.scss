@@ -1,0 +1,35 @@
+@import '~src/sass/_variables';
+.container {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+}
+
+.heading {
+    display: flex;
+    height: 28px;
+    background-color: $primary;
+    color: $primary-contrast;
+    border: 1px solid $accent;
+}
+
+.payload {
+    border: 1px solid $accent;
+    width: calc(100% - 2px);
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $accent-contrast;
+}
+
+.candy {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    -o-object-fit: contain;
+    -o-object-position: center;
+}
+
+

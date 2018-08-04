@@ -1,0 +1,247 @@
+[
+    {
+        "name" : "Contest 1",
+        "locks": [ 
+            {"id": 1000, "type":"numeric", "tumblers":4, "currentValue": "1110", "solution": "1111"},
+            {"id": 1001, "type":"numeric", "tumblers":0, "currentValue": "0", "solution": "1"},
+            {"id": 1002, "type":"numeric", "tumblers":4, "currentValue": "1110", "solution": "1111"},
+            {"id": 1003, "type":"numeric", "tumblers":4, "currentValue": "1110", "solution": "1111"},
+            {"id": 1004, "type":"alphabetic", "tumblers":5, "currentValue": "AAAAB", "solution": "AAAAA"},
+            {"id": 1005, "type":"alphabetic", "tumblers":5, "currentValue": "AAAAB", "solution": "AAAAA"},
+            {"id": 1006, "type":"alphabetic", "tumblers":5, "currentValue": "AAAAB", "solution": "AAAAA"},
+            {"id": 1007, "type":"propeller", "tumblers":3, "currentValue": "", "solution": "1L12L11R22R2", "options": ["Apple", "Banana", "Strawberry"]},
+            {"id": 1008, "type":"button", "tumblers":5, "currentValue": "", "solution": "ML1JL1MR2JR2", "options": ["Alpha", "Beta", "Charlie", "Delta", "Echo"]}
+
+
+        ],
+        "journal": {"currentPage": 1, "pages": ["Page 1", "Page 2", "Page 3"] },
+        "images":[
+            { "type": "picture", "images": [{"condition": "", "text": "picture", "image":"assets/picture.png"}]},
+            { "type": "chair", "images": [{"condition": "", "text": "chair", "image":"assets/chair.png"}]},
+            { "type": "chair2", "images": [{"condition": "", "text": "chair2", "image":"assets/chair2.png"}]},
+            { "type": "desk", "images": [{"condition": "", "text": "desk", "image":"assets/desk.png"}]},
+            { "type": "refrigerator", "images": [{"condition": "closed", "text": "refrigerator", "image":"assets/refrigerator-closed.png"},{"condition": "opened", "text": "refrigerator", "image":"assets/refrigerator-opened.png"}]},
+            { "type": "cabinet", "images": [{"condition": "closed", "text": "cabinet", "image":"assets/cabinet-closed.png"},{"condition": "opened", "text": "cabinet", "image":"assets/cabinet-opened.png"}]},
+            { "type": "lockbox", "images": [{"condition": "closed", "text": "lockbox", "image":"assets/lockbox-closed.png"},{"condition": "opened", "text": "lockbox", "image":"assets/lockbox-opened.png"}]},
+            { "type": "door", "images": [{"condition": "closed", "text": "door", "image":"assets/door-closed.png"},{"condition": "opened", "text": "door", "image":"assets/door-opened.png"}]},
+            { "type": "credenza", "images": [{"condition": "closed", "text": "credenza", "image":"assets/credenza-closed.png"},{"condition": "opened", "text": "credenza", "image":"assets/credenza-opened.png"}]},
+            { "type": "journal", "images": [{"condition": "closed", "text": "journal", "image":"assets/journal-closed.png"},{"condition": "opened", "text": "journal", "image":"assets/journal-opened.png"}]}
+            ],
+            
+        "rooms": [
+            {
+                "id": 1,
+                "name": "First room",
+                "contents": [
+                    {
+                        "id": "101",
+                        "type": "door",
+                        "isVisible": true,
+                        "viewIndex": 0,
+                        "lockId": 1001,
+                        "canBeOpened": false
+                    },
+                    {
+                        "id": "103",
+                        "type": "chair",
+                        "isVisible": true,
+                        "viewIndex": 0,
+                        "data": 1001
+                    },
+                    {
+                        "id": "104",
+                        "type": "door",
+                        "isVisible": true,
+                        "lockId": 1003,
+                        "viewIndex": 2,
+                        "data": 1
+                    },
+                    {
+                        "id": "105",
+                        "type": "cabinet",
+                        "lockId": 1005,
+                        "isVisible": true,
+                        "viewIndex": 2
+                    },
+                    {
+                        "id": "106",
+                        "type": "refrigerator",
+                        "isVisible": true,
+                        "lockId": 1006,
+                        "viewIndex": 2
+                    },
+                    {
+                        "id": "107",
+                        "type": "credenza",
+                        "isVisible": true,
+                        "lockId": 1004,
+                        "viewIndex": 0
+                    },
+                    {
+                        "id": "108",
+                        "type": "sequence",
+                        "lockId": 1007,
+                        "isVisible": true,
+                        "viewIndex": 3,
+                        "canBeOpened": false
+                    },
+                    {
+                        "id": "108",
+                        "type": "sequence",
+                        "lockId": 1008,
+                        "isVisible": true,
+                        "viewIndex": 1,
+                        "canBeOpened": false
+                    }
+                ],
+                "background": 
+                    {
+                        "image": "assets/wooden-wall.jpg",
+                        "condition": "North",
+                        "text": "North View"
+                    },
+                "isVisible": true
+            },
+            {
+                "id": 2,
+                "name": "Second room",
+               "contents": [
+                    {
+                        "id": "201",
+                        "type": "door",
+                        "isVisible": true,
+                        "lockId": 1003,
+                        "viewIndex": 0,
+                        "data": 0
+                    },
+                    {
+                        "id": "202",
+                        "type": "door",
+                        "isVisible": true,
+                        "lockId": 1003,
+                        "viewIndex": 1,
+                        "data": 2
+                    },
+                    {
+                        "id": "203",
+                        "type": "lockbox",
+                        "isVisible": true,
+                        "lockId": 1003,
+                        "viewIndex": 1,
+                        "contents": [{
+                            "id": "2204",
+                            "type": "picture",
+                            "image": {
+                                "image": "assets/hints/key.jpg",
+                                "condition": "",
+                                "text": "PI"
+                            }
+                        }]
+                    },
+                    {
+                        "id": "204",
+                        "type": "picture",
+                        "isVisible": true,
+                        "viewIndex": 3
+                    },
+                    {
+                        "id": "204",
+                        "type": "picture",
+                        "isVisible": true,
+                        "viewIndex": 2,
+                        "background": [{
+                            "image": "assets/hints/pi.jpg",
+                            "condition": "",
+                            "text": "PI"
+                        }]
+                    },
+                   {
+                        "id": "205",
+                        "type": "picture",
+                        "isVisible": true,
+                        "viewIndex": 3
+                    }
+                ],
+                "background": 
+                    {
+                        "image": "assets/cave-wall.jpg",
+                        "condition": "North",
+                        "text": "North View"
+                    },
+                "isVisible": false
+            },
+            {
+                "id": 3,
+                "name": "Third room",
+                "contents": [
+                    {
+                        "id": "301",
+                        "type": "door",
+                        "isVisible": true,
+                        "lockId": 1003,
+                        "viewIndex": 0,
+                        "data": 1
+                    },
+                    {
+                        "id": "302",
+                        "type": "door",
+                        "isVisible": true,
+                        "lockId": 1000,
+                        "viewIndex": 3,
+                        "data": 3
+                    },
+                    {
+                        "id": "303",
+                        "type": "desk",
+                        "isVisible": true,
+                        "viewIndex": 2
+                    },
+                    {
+                        "id": "304",
+                        "type": "picture",
+                        "isVisible": true,
+                        "viewIndex": 1
+                    },
+                    {
+                        "id": "305",
+                        "type": "picture",
+                        "isVisible": true,
+                        "viewIndex": 1
+                    },
+                    {
+                        "id": "306",
+                        "type": "chair2",
+                        "isVisible": true,
+                        "viewIndex": 3
+                    },
+                    {
+                        "id": "307",
+                        "type": "journal",
+                        "lockId": 1003,
+                        "isVisible": true,
+                        "viewIndex": 3
+                    }
+                ],
+                "background": 
+                    {
+                        "image": "assets/skull-wallpaper.jpg",
+                        "condition": "North",
+                        "text": "North View"
+                    },
+                "isVisible": false
+            },
+            {
+                "id": 4,
+                "name": "Finished",
+                "contents": [],
+                "background": 
+                    {
+                        "image": "",
+                        "condition": "",
+                        "text": "Successful Completion!"
+                    },
+                "isVisible": false
+                }
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+.digit {
+    background-color: silver;
+    color: white;
+    width:2em;
+    height:2em;
+    // padding: .5em 0 .3em 0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: larger;
+    padding-top: 0.7em;
+}
+.selected {
+    border-color: white;
+    border-bottom-style: outset;
+    
+    border-top-style: inset;
+}
+.tumblers {
+    border: 1px solid black;
+    border-color:black;
+    margin-right: 4px;
+}

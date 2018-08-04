@@ -1,0 +1,23 @@
+
+.background {
+    flex-grow: 1;  
+    height: calc(50% - 4px);
+    width: calc(50% - 4px);
+    background-repeat: repeat;
+    border: 2px solid black;
+}
+
+.container {
+    display:flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.move {
+    background-color: gray;   
+    position: relative;
+    width: 30px;
+}

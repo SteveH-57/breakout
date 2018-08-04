@@ -1,0 +1,6 @@
+<div class="spacedContainer">
+  <div *ngFor="let item of viewItems" class="itemContainer" (click)="doSomething(item)">
+    <div class="itemImage" [style.background-image]="imageBackground(item)">
+    </div>
+  </div>
+</div>

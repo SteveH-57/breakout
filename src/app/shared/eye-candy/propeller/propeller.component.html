@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="tab-header heading">
+        <mat-icon (click)="spinLeft()">undo</mat-icon>
+        <span style="flex-grow: 1; text-align: center;">{{title}}</span>
+        <mat-icon (click)="spinRight()">redo</mat-icon>
+    </div>
+    <div class="payload" style="background-image:url('/assets/plane.jpg');">
+        <img src="/assets/propeller.png" class="candy" (@spin.done)="animationDone($event)" [@spin]="spinState">
+    </div>
+</div>
+<!-- <mat-card class="container">
+        <mat-toolbar color="primary">
+            <mat-icon (click)="spinLeft()">undo</mat-icon>
+            <span style="flex-grow: 1; text-align: center;">{{title}}</span>
+            <mat-icon (click)="spinRight()">redo</mat-icon>
+        </mat-toolbar>
+    <mat-card-content class="payload" style="background-image:url('/assets/plane.jpg');">
+        <img src="/assets/propeller.png" class="candy" (@spin.done)="animationDone($event)" [@spin]="spinState">
+    </mat-card-content>
+</mat-card> -->

@@ -1,0 +1,14 @@
+<h2 mat-dialog-title [style.background-color]="color">Combination Lock</h2>
+<mat-dialog-content>
+  <div style="display:flex;">
+    <div *ngFor="let t of tumbles; let i=index ">
+      <app-tumbler [type]="t.type" [options]="t.options" [value]="t.value" (change)="tumblerChange(i,$event)"></app-tumbler>
+    </div>
+  </div>
+</mat-dialog-content>
+
+{{currentReading}} should be {{solution}}
+<mat-dialog-actions>
+  <button mat-raised-button (click)="compare()">Try</button>
+  <button mat-raised-button (click)="close()">Close</button>
+</mat-dialog-actions>

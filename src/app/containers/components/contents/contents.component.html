@@ -1,0 +1,12 @@
+<div class="spacedContainer">
+  <div *ngFor="let item of viewItems" class="itemContainer" (click)="doSomething(item)" [ngSwitch]="item.type">
+    <div *ngSwitchCase="'sequence'" class="fullsize">
+      <app-sequence [lockId]="item.lockId"></app-sequence>
+    </div>
+    <div *ngSwitchCase="'picture'" class="itemImage picture" [style.background-image]="imageBackground(item)">
+    </div>
+    <div *ngSwitchDefault class="itemImage" [style.background-image]="typeBackground(item)">
+      <app-sub-contents [item]="item" *ngIf="item.contents"></app-sub-contents>
+    </div>
+  </div>
+</div>

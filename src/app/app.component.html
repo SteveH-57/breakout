@@ -1,0 +1,38 @@
+<div class="app">
+  <mat-toolbar color="primary">
+    <span class="title" style="padding-right:4em;">
+      Welcome to {{ title }}!
+    </span>
+    <span class="spacer"></span>
+    <div>
+      <mat-menu #contestMenu="matMenu">
+        <button *ngFor="let item of contests$ | async; let i=index" mat-menu-item (click)="pickContest(i)">{{item.name}}</button>
+      </mat-menu>
+      <button mat-icon-button [matMenuTriggerFor]="contestMenu" color="accent">
+        Contest
+      </button>
+
+      <mat-menu #containerMenu="matMenu">
+        <button *ngFor="let item of containerNames; let i=index" mat-menu-item (click)="pickContainer(i)">{{item}}</button>
+      </mat-menu>
+      <button *ngIf="ready" mat-icon-button [matMenuTriggerFor]="containerMenu" color="accent">
+        Container
+      </button>
+
+    </div>
+  </mat-toolbar>
+  <div class="toolbag springContainer">
+    <div class="tool"></div>
+  </div>
+  <app-room class="payload" *ngIf="ready"></app-room>
+  <div class="payload" *ngIf="!ready">
+    <app-sequence></app-sequence>
+  </div>
+  <footer class="springContainer">
+    <div class="footPanel">
+      <b>Elapsed Time: </b> {{elapsedTime}}
+    </div>
+    <div class="footPanel spacer">
+      <b>Last Message: </b>{{lastMessage}}</div>
+  </footer>
+</div>

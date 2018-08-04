@@ -1,0 +1,20 @@
+@import '~@angular/material/theming';
+
+// deep-purple
+
+$app-primary: mat-palette($mat-deep-purple);
+$app-accent:  mat-palette($mat-amber, A200, A100, A400);
+$app-warn:    mat-palette($mat-red);
+
+$primary: mat-color($app-primary);
+$primary-contrast: mat-color($app-primary, default-contrast);
+$accent: mat-color($app-accent);
+$accent-contrast: mat-color($app-accent, default-contrast);
+$warn: mat-color($app-warn);
+$warn-contrast: mat-color($app-warn, default-contrast);
+
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+$app-text: mat-color(map-get($app-theme, foreground), text);
+
+

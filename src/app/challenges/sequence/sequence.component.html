@@ -1,0 +1,9 @@
+<div class="main-container">
+  <div class="container" *ngIf="lock">
+    <ng-container *ngFor="let choice of lock.options; let i=index;">
+      <button *ngIf="lock.type=='button'" mat-fab (click)="press(choice)" [ngClass]="'color'+ (i % 6)">{{choice}}</button>
+      <app-propeller *ngIf="lock.type=='propeller'"  (action)="press(choice + $event)" title='{{choice}}'></app-propeller>
+    </ng-container>
+  </div>
+  {{finalResult()}}
+</div>

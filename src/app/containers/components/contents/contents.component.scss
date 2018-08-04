@@ -1,0 +1,43 @@
+.spacedContainer {
+    display:flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    }
+
+.itemContainer {
+    text-align: center; 
+    color:black; 
+    min-height: 3em;
+    min-width: 3em;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 12px;
+}
+
+
+.itemImage {
+    width:auto;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+}
+
+.picture {
+    border-left: 25px solid darkgoldenrod; 
+    border-right: 25px solid sienna;
+    border-top:25px solid darkgoldenrod; 
+    border-bottom:25px solid sienna;
+    background-color: black;
+    background-position: center top;
+    background-size: contain;
+    width: auto;
+}
+
+.fullsize {
+    width:auto;
+    height: 100%;
+
+}
